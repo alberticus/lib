@@ -6,7 +6,7 @@
 /*   By: atsai <dhill@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 17:49:36 by atsai             #+#    #+#             */
-/*   Updated: 2017/12/11 21:44:17 by atsai            ###   ########.fr       */
+/*   Updated: 2017/12/12 19:12:34 by atsai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,19 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	answer = 0;
 	if (little[littleindex] == '\0')
 		return ((char*)big);
-	while (big[searchindex] != '\0' && searchindex <= len)
+	while (big[searchindex] != '\0' && searchindex < len)
 	{
 		answer = searchindex;
 		while (big[searchindex] != '\0' && little[littleindex] != '\0'
 				&& big[searchindex] == little[littleindex] &&
-				searchindex <= len)
+				searchindex < len)
 		{
 			searchindex++;
 			littleindex++;
 		}
 		if (little[littleindex] == '\0')
 			return ((char*)&big[answer]);
-		searchindex++;
+		searchindex = answer + 1;
 		littleindex = 0;
 	}
 	return (0);

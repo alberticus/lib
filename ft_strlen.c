@@ -6,15 +6,15 @@
 /*   By: atsai <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 21:50:13 by atsai             #+#    #+#             */
-/*   Updated: 2017/12/11 21:27:01 by atsai            ###   ########.fr       */
+/*   Updated: 2017/12/12 14:35:18 by atsai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strlen(const char *str)
+size_t		ft_strlen(const char *str)
 {
-	int index;
+	size_t index;
 
 	index = 0;
 	while (str[index] != '\0')

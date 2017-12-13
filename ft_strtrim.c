@@ -6,7 +6,7 @@
 /*   By: atsai <atsai@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 22:45:21 by atsai             #+#    #+#             */
-/*   Updated: 2017/12/11 21:38:48 by atsai            ###   ########.fr       */
+/*   Updated: 2017/12/12 14:57:36 by atsai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ char		*ft_strtrim(char const *s)
 	char	*newstring;
 	int		index;
 
+	if (!s)
+		return (0);
 	index = 0;
 	start = findstart(s);
 	end = findend(s);

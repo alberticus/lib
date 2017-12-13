@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atsai <atsai@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/03 20:45:03 by atsai             #+#    #+#             */
-/*   Updated: 2017/12/12 19:23:08 by atsai            ###   ########.fr       */
+/*   Created: 2017/12/12 20:01:27 by atsai             #+#    #+#             */
+/*   Updated: 2017/12/12 20:27:09 by atsai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+int		ft_islower(char c)
 {
-	size_t size;
-
-	if (!s)
-		return ;
-	size = ft_strlen(s);
-	ft_bzero(s, size);
+	if (c >= 'a' && c <= 'z')
+		return (1);
+	else
+		return (0);
 }

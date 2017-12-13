@@ -1,23 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_stringreverse.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atsai <atsai@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/03 20:45:03 by atsai             #+#    #+#             */
-/*   Updated: 2017/12/12 19:23:08 by atsai            ###   ########.fr       */
+/*   Created: 2017/12/12 20:14:41 by atsai             #+#    #+#             */
+/*   Updated: 2017/12/12 20:29:39 by atsai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+char	*ft_stringreverse(char *string)
 {
-	size_t size;
+	int		index1;
+	int		index2;
+	int		length;
+	char	storage;
 
-	if (!s)
-		return ;
-	size = ft_strlen(s);
-	ft_bzero(s, size);
+	length = 0;
+	index1 = 0;
+	while (string[length])
+		length++;
+	length--;
+	index2 = length;
+	while (index1 < length)
+	{
+		storage = string[index2];
+		string[index2] = string[index1];
+		string[index1] = storage;
+		index1++;
+		index2--;
+		if (index2 == (length / 2))
+			break;
+	}
+	return (string);
 }

@@ -6,7 +6,7 @@
 /*   By: atsai <atsai@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/03 21:20:20 by atsai             #+#    #+#             */
-/*   Updated: 2017/12/11 22:08:24 by atsai            ###   ########.fr       */
+/*   Updated: 2017/12/12 20:25:44 by atsai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char				*ft_strcpy(char *dst, const char *src);
 void				ft_strdel(char **as);
 char				*ft_strdup(char *src);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
-int					ft_strlen(const char *str);
+size_t				ft_strlen(const char *str);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strncpy(char *dst, const char *src, size_t len);
@@ -87,5 +87,16 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+/*
+** EXTRA FUNCTIONS
+*/
+
+int					ft_iswhitespace(char c);
+int					ft_isupper(char c);
+int					ft_islower(char c);
+void				ft_replacecharacter(char *string, char replacethis,
+										char withthis);
+char				*ft_stringreverse(char *string);
 
 #endif

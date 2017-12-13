@@ -6,7 +6,7 @@
 /*   By: atsai <atsai@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 19:30:44 by atsai             #+#    #+#             */
-/*   Updated: 2017/12/11 21:27:25 by atsai            ###   ########.fr       */
+/*   Updated: 2017/12/12 14:47:12 by atsai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 
 	index1 = 0;
 	index2 = start;
+	if (!s)
+		return (0);
 	copy = (char*)malloc(sizeof(*copy) * (unsigned long)(len + 1));
 	if (!copy)
 		return (0);

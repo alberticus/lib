@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_replacecharacter.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atsai <atsai@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/03 20:45:03 by atsai             #+#    #+#             */
-/*   Updated: 2017/12/12 19:23:08 by atsai            ###   ########.fr       */
+/*   Created: 2017/12/12 20:10:31 by atsai             #+#    #+#             */
+/*   Updated: 2017/12/12 20:35:58 by atsai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+void	ft_replacecharacter(char *string, char replacethis, char withthis)
 {
-	size_t size;
+	int index;
 
-	if (!s)
-		return ;
-	size = ft_strlen(s);
-	ft_bzero(s, size);
+	index = 0;
+	while (string[index])
+	{
+		if (string[index] == replacethis)
+			string[index] = withthis;
+		index++;
+	}
 }

@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_iswhitespace.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atsai <atsai@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/03 20:45:03 by atsai             #+#    #+#             */
-/*   Updated: 2017/12/12 19:23:08 by atsai            ###   ########.fr       */
+/*   Created: 2017/12/12 19:32:43 by atsai             #+#    #+#             */
+/*   Updated: 2017/12/12 19:49:15 by atsai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+int		ft_iswhitespace(char c)
 {
-	size_t size;
-
-	if (!s)
-		return ;
-	size = ft_strlen(s);
-	ft_bzero(s, size);
+	if (c == ' ' || c == '\r' || c == '\t' || c == '\n' || c == '\v' ||
+		c == '\f')
+		return (1);
+	else
+		return (0);
 }

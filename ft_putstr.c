@@ -6,7 +6,7 @@
 /*   By: atsai <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 21:00:06 by atsai             #+#    #+#             */
-/*   Updated: 2017/12/11 20:56:46 by atsai            ###   ########.fr       */
+/*   Updated: 2017/12/12 18:59:39 by atsai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr(char *str)
 	int index;
 
 	index = 0;
+	if (!str)
+		return ;
 	while (str[index] != '\0')
 	{
 		write(1, &str[index], 1);

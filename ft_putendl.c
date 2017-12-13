@@ -6,7 +6,7 @@
 /*   By: atsai <atsai@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 19:21:05 by atsai             #+#    #+#             */
-/*   Updated: 2017/12/11 21:43:21 by atsai            ###   ########.fr       */
+/*   Updated: 2017/12/12 18:59:23 by atsai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putendl(char const *s)
 	int index;
 
 	index = 0;
+	if (!s)
+		return ;
 	while (s[index] != '\0')
 	{
 		ft_putchar(s[index]);

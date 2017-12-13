@@ -6,7 +6,7 @@
 /*   By: atsai <atsai@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 23:09:50 by atsai             #+#    #+#             */
-/*   Updated: 2017/12/11 21:49:34 by atsai            ###   ########.fr       */
+/*   Updated: 2017/12/12 14:59:35 by atsai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ char		**ft_strsplit(char const *s, char c)
 	int		wordcount;
 	int		index;
 
+	if (!s)
+		return (0);
 	index = 0;
 	wordcount = countparts(s, c);
 	array = (char**)malloc(sizeof(*array) * (countparts(s, c) + 1));

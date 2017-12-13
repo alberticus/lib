@@ -6,7 +6,7 @@
 /*   By: atsai <atsai@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/07 19:17:45 by atsai             #+#    #+#             */
-/*   Updated: 2017/12/11 21:50:09 by atsai            ###   ########.fr       */
+/*   Updated: 2017/12/12 18:43:31 by atsai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ static void	fprocess(int n, int fd)
 		fprocess(n % 10, fd);
 	}
 	else
-		ft_putchar_fd(((n >= 0) ? n + '0' : -n + '0'), fd);
+		ft_putchar_fd(((n >= 0) ? n : -n) + '0', fd);
 }
 
 void		ft_putnbr_fd(int n, int fd)
 {
 	if (n < 0)
-		ft_putchar_fd('-', n);
+		ft_putchar_fd('-', fd);
 	fprocess(n, fd);
 }
